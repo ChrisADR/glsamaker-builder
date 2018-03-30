@@ -33,9 +33,9 @@ GLSAMAKER_PORTDIR = "/usr/portage/"
 
 # Bugzilla login info
 GLSAMAKER_BUGZIE_SKIP = false
-GLSAMAKER_BUGZIE_HOST = 'bugs.gentoo.org'
-GLSAMAKER_BUGZIE_USER = nil
-GLSAMAKER_BUGZIE_PW = nil
+GLSAMAKER_BUGZIE_HOST = 'localhost'
+GLSAMAKER_BUGZIE_USER = 'root@localhost.com'
+GLSAMAKER_BUGZIE_PW = 'glsamaker'
 
 # Location of xmlindent(1)
 GLSAMAKER_XMLINDENT = "/usr/bin/xmlindent"

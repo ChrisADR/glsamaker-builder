@@ -12,16 +12,26 @@ RUN ["emerge", "--config", "mysql"]
 
 #install deps
 COPY /config/bugzilla /etc/portage/package.use/
+COPY /config/apache /etc/portage/package.use/
 RUN ["emerge", "rake", "dev-ruby/bundler", "www-apps/bugzilla"]
 
 #prepare glsamker dir
-RUN ["mkdir", "-p", "/glsamaker"]
+RUN ["mkdir", "/glsamaker"]
 RUN ["mkdir", "/config"]
+RUN ["mkdir", "/database"]
 
-COPY /config/database.yml /config
-COPY /config/glsamaker.rb /config
+#send config files
+COPY /config/database.yml /config/
+COPY /config/glsamaker.rb /config/
+COPY /database/bugzilla.sql /database/
+COPY /database/glsamaker.sql /database/
 
-COPY /config/README /
+#prepare bugzilla
+COPY /bugzilla/localconfig /var/www/localhost/htdocs/bugzilla/
+COPY /bugzilla/default_vhost.include /etc/apache2/vhosts.d/
+COPY /bugzilla/checksetup.conf /config/
+
+#run final configurations
 COPY /init/init.sh /
 
 EXPOSE 80

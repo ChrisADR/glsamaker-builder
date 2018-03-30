@@ -16,7 +16,7 @@ development:
   database: glsamaker_development
   pool: 5
   username: root
-  password: glsamaker-dev
+  password: glsamaker
 #  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -29,7 +29,7 @@ test:
   database: glsamaker_test
   pool: 5
   username: root
-  password: glsamaker-dev
+  password: glsamaker
 #  socket: /tmp/mysql.sock
 
 production:
@@ -39,6 +39,6 @@ production:
   database: glsamaker_production
   pool: 5
   username: root
-  password: glsamaker-dev
+  password: glsamaker
 #  socket: /tmp/mysql.sock
 

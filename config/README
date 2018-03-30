@@ -1,6 +1,0 @@
-In-Docker configuration for glsamaker
-
-Copy the contents from this directory into /glsamaker/config/
-
-	cp /config/* /glsamaker/config/
-

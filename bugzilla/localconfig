@@ -1,0 +1,2 @@
+$db_pass = 'glsamaker';
+$db_check = 0;

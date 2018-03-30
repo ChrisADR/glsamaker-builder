@@ -1,0 +1,10 @@
+DocumentRoot /var/www/localhost/htdocs/bugzilla
+ServerName localhost
+
+<Directory /var/www/localhost/htdocs/bugzilla>
+	AddHandler cgi-script .cgi
+	Options +Indexes +ExecCGI
+	DirectoryIndex index.cgi index.html
+	AllowOverride All FileInfo Indexes Options
+	Require all granted
+</Directory>

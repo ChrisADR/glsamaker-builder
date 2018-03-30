@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS `bugs` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`;
+CREATE USER 'bugs'@'localhost' IDENTIFIED BY 'glsamaker';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER ON `bugs`.* TO 'bugs'@'localhost' IDENTIFIED BY 'glsamaker';
